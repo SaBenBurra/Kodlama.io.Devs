@@ -36,4 +36,13 @@ public class InMemoryProgrammingLanguageRepository
       }
     }
   }
+
+  public boolean checkIfNameIsAlreadyExists(String name) {
+    for (ProgrammingLanguage programmingLanguage : programmingLanguages) {
+      if (programmingLanguage.getName() == name) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

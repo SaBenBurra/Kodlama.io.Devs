@@ -8,4 +8,5 @@ public interface ProgrammingLanguageRepository {
   ProgrammingLanguage add(ProgrammingLanguage programmingLanguage);
   ProgrammingLanguage update(ProgrammingLanguage programmingLanguage);
   void deleteById(int id);
+  boolean checkIfNameIsAlreadyExists(String name);
 }
