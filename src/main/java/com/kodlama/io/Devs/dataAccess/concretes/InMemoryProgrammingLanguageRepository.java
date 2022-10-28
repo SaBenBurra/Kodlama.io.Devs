@@ -3,7 +3,9 @@ package com.kodlama.io.Devs.dataAccess.concretes;
 import com.kodlama.io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
 import com.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
 import java.util.ArrayList;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class InMemoryProgrammingLanguageRepository
   implements ProgrammingLanguageRepository {
 
