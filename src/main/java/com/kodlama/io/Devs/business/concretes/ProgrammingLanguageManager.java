@@ -20,29 +20,15 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService {
   }
 
   public ArrayList<ProgrammingLanguage> getAll() {
-    return programmingLanguageRepository.getAll();
+    return (ArrayList<ProgrammingLanguage>) programmingLanguageRepository.findAll();
   }
 
   public void add(ProgrammingLanguage programmingLanguage) {
-    if (
-      !programmingLanguageRepository.checkIfNameIsAlreadyExists(
-        programmingLanguage.getName()
-      ) &&
-      !programmingLanguage.getName().isBlank()
-    ) {
-      programmingLanguageRepository.add(programmingLanguage);
-    }
+      programmingLanguageRepository.save(programmingLanguage);
   }
 
   public void update(ProgrammingLanguage programmingLanguage) {
-    if (
-      !programmingLanguageRepository.checkIfNameIsAlreadyExists(
-        programmingLanguage.getName()
-      ) &&
-      !programmingLanguage.getName().isBlank()
-    ) {
-      programmingLanguageRepository.update(programmingLanguage);
-    }
+      programmingLanguageRepository.save(programmingLanguage);
   }
 
   public void deleteById(int id) {
