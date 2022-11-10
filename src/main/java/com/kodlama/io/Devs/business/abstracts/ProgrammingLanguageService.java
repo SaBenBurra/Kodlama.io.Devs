@@ -1,12 +1,14 @@
 package com.kodlama.io.Devs.business.abstracts;
 
+import com.kodlama.io.Devs.business.requests.CreateProgrammingLanguageRequest;
+import com.kodlama.io.Devs.business.responses.GetAllProgrammingLanguagesResponse;
 import com.kodlama.io.Devs.entities.concretes.ProgrammingLanguage;
 import java.util.ArrayList;
 
 public interface ProgrammingLanguageService {
-  public ArrayList<ProgrammingLanguage> getAll();
+  public ArrayList<GetAllProgrammingLanguagesResponse> getAll();
 
-  public void add(ProgrammingLanguage programmingLanguage);
+  public void add(CreateProgrammingLanguageRequest createProgrammingLanguageRequest);
 
   public void update(ProgrammingLanguage programmingLanguage);
 
